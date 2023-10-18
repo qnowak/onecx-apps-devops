@@ -1,3 +1,7 @@
+.idea
+*.iml
+.terraform
+
 # Local .terraform directories
 **/.terraform/*
 
