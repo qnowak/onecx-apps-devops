@@ -13,5 +13,5 @@ provider "github" {
 }
 
 module "onecx-event" {
-  source = "products/onecx-event"
+  source = "./products/onecx-event"
 }
