@@ -4,7 +4,7 @@ module "onecx-event-team" {
   source = "../../modules/github/team"
   team_name        = "onecx-event"
   team_description = "onecx event management services team"
-  team_members_file_path   = "products/onecx-event-management/team.csv"
+  team_members_file_path   = "products/onecx-event/team.csv"
 }
 
 # ONECX-EVENT
