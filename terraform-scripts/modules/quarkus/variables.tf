@@ -28,8 +28,3 @@ variable "branch" {
   default = "main"
 }
 
-variable "visibility" {
-  description = "Project visibility. visibility or public"
-  type = string
-  default = "public"
-}
