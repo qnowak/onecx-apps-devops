@@ -16,6 +16,6 @@ module "onecx-event" {
   source = "./products/onecx-event"
 }
 
-module "onecx-chat" {
-  source = "./products/onecx-chat"
-}
+#module "onecx-chat" {
+#  source = "./products/onecx-chat"
+#}
