@@ -7,7 +7,7 @@ module "repository" {
   team_id                = var.team_id
   branch                 = var.branch
   project_repo           = true
-  private                = var.private
+  visibility                = var.visibility
 }
 
 # GITHUB REPOSITORY BRANCHES/PATTERNS

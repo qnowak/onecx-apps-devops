@@ -61,8 +61,8 @@ variable "labels" {
   default = {}
 }
 
-variable "private" {
-  description = "Project visibility. private or public"
-  type = bool
-  default = false
+variable "visibility" {
+  description = "Project visibility. visibility or public"
+  type = string
+  default = "public"
 }
