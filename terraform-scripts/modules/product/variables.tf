@@ -60,3 +60,9 @@ variable "labels" {
   type = map(string)
   default = {}
 }
+
+variable "private" {
+  description = "Project visibility. private or public"
+  type = bool
+  default = false
+}

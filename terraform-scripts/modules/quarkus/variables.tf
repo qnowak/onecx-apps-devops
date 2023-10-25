@@ -27,3 +27,9 @@ variable "branch" {
   type = string
   default = "main"
 }
+
+variable "private" {
+  description = "Project visibility. private or public"
+  type = bool
+  default = false
+}

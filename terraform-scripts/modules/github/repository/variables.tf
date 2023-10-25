@@ -39,3 +39,9 @@ variable "project_repo" {
   type = bool
   default = false
 }
+
+variable "private" {
+  description = "Project visibility. private or public"
+  type = bool
+  default = false
+}
