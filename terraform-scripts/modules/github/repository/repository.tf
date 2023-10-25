@@ -11,6 +11,7 @@ resource "github_repository" "repository" {
   allow_rebase_merge = false
   allow_squash_merge = true
   delete_branch_on_merge = true
+  visibility          = var.visibility
 }
 
 resource "github_branch_default" "main" {

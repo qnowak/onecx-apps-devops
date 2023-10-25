@@ -10,6 +10,7 @@ module "repository" {
   team_permission        = var.team_permission
   team_id                = var.team_id
   branch                 = var.branch
+  visibility                 = var.visibility
 }
 
 # GITHUB REPOSITORY RULES
