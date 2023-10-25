@@ -9,10 +9,3 @@ module "repository" {
   project_repo           = true
   visibility                = var.visibility
 }
-
-# GITHUB REPOSITORY LABELS
-module "labels" {
-  source = "../github/labels"
-  repository_name = module.repository.repository_name
-  labels = merge({  "Team_${var.team_name}" = var.label_color_team, (module.repository.repository_name) = var.label_color_product }, var.labels)
-}
