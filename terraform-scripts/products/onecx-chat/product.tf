@@ -9,8 +9,7 @@ module "onecx-chat-team" {
 
 # ONECX-CHAT
 module "onecx-chat" {
-  source = "../../modules/product"
-  visibility = "private"
+  source = "../../modules/private"
   repository_name        = "onecx-chat"
   repository_description = "OneCx chat Management"
   team_id                = module.onecx-chat-team.team_id
@@ -19,8 +18,7 @@ module "onecx-chat" {
 
 # ONEC-CHAT-SVC
 module "onecx-chat-svc" {
-  source = "../../modules/quarkus"
-  visibility = "private"
+  source = "../../modules/private"
   repository_name        = "onecx-chat-svc"
   repository_description = "OneCx chat Management Service"
   team_id                = module.onecx-chat-team.team_id
@@ -37,8 +35,7 @@ module "onecx-chat-svc" {
 
 # ONECX-CHAT-UI
 module "onecx-chat-ui" {
-  source = "../../modules/angular"
-  visibility = "private"
+  source = "../../modules/private"
   repository_name        = "onecx-chat-ui"
   repository_description = "OneCx chat Management UI"
   team_id                = module.onecx-chat-team.team_id
