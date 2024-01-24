@@ -17,12 +17,12 @@ module "onecx-chat" {
 }
 
 # ONEC-CHAT-SVC
-#module "onecx-chat-svc" {
-#  source = "../../modules/private"
-#  repository_name        = "onecx-chat-svc"
-#  repository_description = "OneCx chat Management Service"
-#  team_id                = module.onecx-chat-team.team_id
-#}
+module "onecx-chat-svc" {
+  source = "../../modules/private"
+  repository_name        = "onecx-chat-svc"
+  repository_description = "OneCx chat Management Service"
+  team_id                = module.onecx-chat-team.team_id
+}
 
 # ONEC-AI-SVC
 module "onecx-ai-svc" {
