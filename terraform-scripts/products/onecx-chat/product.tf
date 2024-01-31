@@ -32,14 +32,23 @@ module "onecx-ai-svc" {
   team_id                = module.onecx-chat-team.team_id
 }
 
-## ONECX-chat-BFF
-#module "onecx-chat-bff" {
-#  source = "../../modules/quarkus"
-#  repository_name        = "onecx-chat-bff"
-#  repository_description = "OneCx chat Management BFF"
-#  team_id                = module.onecx-chat-team.team_id
-#}
-#
+
+# ONEC-AI-UI
+module "onecx-ai-ui" {
+  source = "../../modules/private"
+  repository_name        = "onecx-ai-ui"
+  repository_description = "OneCx chat ai ui"
+  team_id                = module.onecx-chat-team.team_id
+}
+
+# ONECX-chat-BFF
+module "onecx-chat-bff" {
+  source = "../../modules/quarkus"
+  repository_name        = "onecx-chat-bff"
+  repository_description = "OneCx chat Management BFF"
+  team_id                = module.onecx-chat-team.team_id
+}
+
 
 # ONECX-CHAT-UI
 module "onecx-chat-ui" {
