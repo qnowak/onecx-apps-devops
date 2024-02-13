@@ -1,7 +1,7 @@
 
 
 resource "sonarcloud_project" "project" {
-  key        = "${var.organisation}_${var.repository_name}"
+  key        = "${var.organization}_${var.repository_name}"
   name       = var.repository_name
   visibility = "public"
 }

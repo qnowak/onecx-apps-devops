@@ -1,4 +1,4 @@
-variable "organisation" {
+variable "organization" {
   description = "sonar-cloud organization"
   type = string
   default = "onecx-apps"
