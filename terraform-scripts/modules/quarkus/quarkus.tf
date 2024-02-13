@@ -1,5 +1,5 @@
 module "global" {
-  source = "../../modules/global_constants"
+  source = "../global_constants"
 }
 
 # GITHUB REPOSITORY
