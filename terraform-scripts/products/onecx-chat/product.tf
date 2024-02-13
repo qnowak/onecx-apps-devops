@@ -42,12 +42,12 @@ module "onecx-ai-ui" {
 }
 
 # ONECX-chat-BFF
-module "onecx-chat-bff" {
-  source = "../../modules/quarkus"
-  repository_name        = "onecx-chat-bff"
-  repository_description = "OneCx chat Management BFF"
-  team_id                = module.onecx-chat-team.team_id
-}
+#module "onecx-chat-bff" {
+#  source = "../../modules/quarkus"
+#  repository_name        = "onecx-chat-bff"
+#  repository_description = "OneCx chat Management BFF"
+#  team_id                = module.onecx-chat-team.team_id
+#}
 
 
 # ONECX-CHAT-UI
