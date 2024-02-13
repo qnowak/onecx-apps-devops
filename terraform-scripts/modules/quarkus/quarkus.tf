@@ -24,7 +24,7 @@ module "sonarcloud" {
   source = "../sonarcloud"
   repository_name = module.repository.repository_name
   branch = var.branch
-  organization = "onecx-apps"
+  organization = "module.global.organisation"
 }
 
 
