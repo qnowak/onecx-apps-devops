@@ -1,5 +1,5 @@
 module "global" {
-  source = "../global_constants"
+  source = "../../modules/global_constants"
 }
 
 # GITHUB REPOSITORY
@@ -24,7 +24,7 @@ module "sonarcloud" {
   source = "../sonarcloud"
   repository_name = module.repository.repository_name
   branch = var.branch
-  organization = module.global.organisation
+  organisation = module.global.organisation
 }
 
 
