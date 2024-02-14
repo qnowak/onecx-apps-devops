@@ -26,7 +26,7 @@ module "onecx-chat-svc" {
 
 # ONEC-AI-SVC
 module "onecx-ai-svc" {
-  source = "../../modules/private"
+  source = "../../modules/python"
   repository_name        = "onecx-ai-svc"
   repository_description = "OneCx chat ai Service"
   team_id                = module.onecx-chat-team.team_id
@@ -35,7 +35,7 @@ module "onecx-ai-svc" {
 
 # ONEC-AI-UI
 module "onecx-ai-ui" {
-  source = "../../modules/private"
+  source = "../../modules/python"
   repository_name        = "onecx-ai-ui"
   repository_description = "OneCx chat ai ui"
   team_id                = module.onecx-chat-team.team_id
