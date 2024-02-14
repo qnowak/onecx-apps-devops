@@ -12,5 +12,5 @@ resource "sonarcloud_project_main_branch" "branch" {
 }
 
 provider "sonarcloud" {
-  organization = var.organization
+  organization = var.organisation
 }
