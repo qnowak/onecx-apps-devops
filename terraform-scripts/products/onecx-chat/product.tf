@@ -9,7 +9,7 @@ module "onecx-chat-team" {
 
 # ONECX-CHAT
 module "onecx-chat" {
-  source = "../../modules/private"
+  source = "../../modules/product"
   repository_name        = "onecx-chat"
   repository_description = "OneCx chat Management"
   team_id                = module.onecx-chat-team.team_id
