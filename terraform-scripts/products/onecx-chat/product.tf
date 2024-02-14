@@ -18,7 +18,7 @@ module "onecx-chat" {
 
 # ONEC-CHAT-SVC
 module "onecx-chat-svc" {
-  source = "../../modules/private"
+  source = "../../modules/quarkus"
   repository_name        = "onecx-chat-svc"
   repository_description = "OneCx chat Management Service"
   team_id                = module.onecx-chat-team.team_id
@@ -52,7 +52,7 @@ module "onecx-chat-bff" {
 
 # ONECX-CHAT-UI
 module "onecx-chat-ui" {
-  source = "../../modules/private"
+  source = "../../modules/angular"
   repository_name        = "onecx-chat-ui"
   repository_description = "OneCx chat Management UI"
   team_id                = module.onecx-chat-team.team_id
