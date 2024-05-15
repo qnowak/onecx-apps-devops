@@ -32,6 +32,14 @@ module "onecx-ai-svc" {
   team_id                = module.onecx-chat-team.team_id
 }
 
+# ONEC-AI-SVC
+module "onecx-ai-quarkus-svc" {
+  source = "../../modules/quarkus"
+  repository_name        = "onecx-ai-quarkus-svc"
+  repository_description = "OneCx chat ai quarkus Service"
+  team_id                = module.onecx-chat-team.team_id
+}
+
 
 # ONEC-AI-UI
 module "onecx-ai-ui" {
