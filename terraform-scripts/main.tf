@@ -19,3 +19,7 @@ module "onecx-event" {
 module "onecx-chat" {
   source = "./products/onecx-chat"
 }
+
+module "onecx-concessions" {
+  source = "./products/onecx-concessions"
+}
