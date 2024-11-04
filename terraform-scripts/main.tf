@@ -20,6 +20,11 @@ module "onecx-chat" {
   source = "./products/onecx-chat"
 }
 
+module "onecx-ai" {
+  source = "./products/onecx-ai"
+}
+
+
 module "onecx-concessions" {
   source = "./products/onecx-concessions"
 }
