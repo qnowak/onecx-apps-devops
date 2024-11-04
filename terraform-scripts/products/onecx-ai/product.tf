@@ -1,10 +1,10 @@
 
-# TEAM ONECX-CHAT
-module "onecx-chat-team" {
+# TEAM ONECX-AI
+module "onecx-ai-team" {
   source = "../../modules/github/team"
-  team_name        = "onecx-chat"
-  team_description = "onecx chat management services team"
-  team_members_file_path   = "products/onecx-chat/team.csv"
+  team_name        = "onecx-ai"
+  team_description = "onecx ai management services team"
+  team_members_file_path   = "products/onecx-ai/team.csv"
 }
 
 # ONECX-AI
@@ -25,7 +25,7 @@ module "onecx-ai-svc" {
   team_id                = module.onecx-ai-team.team_id
 }
 
-# ONEC-AI-SVC
+# ONEC-AI-QUARKUS-SVC
 module "onecx-ai-quarkus-svc" {
   source = "../../modules/quarkus"
   repository_name        = "onecx-ai-quarkus-svc"
