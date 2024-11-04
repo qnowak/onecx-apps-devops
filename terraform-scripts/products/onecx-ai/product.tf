@@ -33,4 +33,11 @@ module "onecx-ai-quarkus-svc" {
   team_id                = module.onecx-ai-team.team_id
 }
 
+# ONEC-AI-UI
+module "onecx-ai-ui" {
+  source = "../../modules/python"
+  repository_name        = "onecx-ai-ui"
+  repository_description = "OneCx ai ui"
+  team_id                = module.onecx-ai-team.team_id
+}
 
