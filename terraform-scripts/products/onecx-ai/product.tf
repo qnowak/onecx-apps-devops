@@ -1,9 +1,8 @@
-
 # TEAM ONECX-AI
 module "onecx-ai-team" {
   source = "../../modules/github/team"
   team_name        = "onecx-ai"
-  team_description = "onecx ai management services team"
+  team_description = "OneCx ai Management services team"
   team_members_file_path   = "products/onecx-ai/team.csv"
 }
 
@@ -11,33 +10,32 @@ module "onecx-ai-team" {
 module "onecx-ai" {
   source = "../../modules/product"
   repository_name        = "onecx-ai"
-  repository_description = "OneCx ai Management"
+  repository_description = "OneCx AI Management"
   team_id                = module.onecx-ai-team.team_id
   team_name              = module.onecx-ai-team.team_name
 }
 
-
 # ONEC-AI-SVC
 module "onecx-ai-svc" {
-  source = "../../modules/python"
+  source = "../../modules/quarkus"
   repository_name        = "onecx-ai-svc"
-  repository_description = "OneCx ai ai Service"
+  repository_description = "OneCx AI Management Service"
   team_id                = module.onecx-ai-team.team_id
 }
 
-# ONEC-AI-QUARKUS-SVC
-module "onecx-ai-quarkus-svc" {
+# ONECX-AI-BFF
+module "onecx-ai-bff" {
   source = "../../modules/quarkus"
-  repository_name        = "onecx-ai-quarkus-svc"
-  repository_description = "OneCx chat ai quarkus Service"
+  repository_name        = "onecx-ai-bff"
+  repository_description = "OneCx AI Management BFF"
   team_id                = module.onecx-ai-team.team_id
 }
 
 # ONEC-AI-UI
 module "onecx-ai-ui" {
-  source = "../../modules/python"
+  source = "../../modules/angular"
   repository_name        = "onecx-ai-ui"
-  repository_description = "OneCx ai ui"
+  repository_description = "OneCx AI Management UI"
   team_id                = module.onecx-ai-team.team_id
 }
 
