@@ -2,7 +2,7 @@
 module "onecx-ai-team" {
   source = "../../modules/github/team"
   team_name        = "onecx-ai"
-  team_description = "OneCx ai Management services team"
+  team_description = "OneCx AI Management services team"
   team_members_file_path   = "products/onecx-ai/team.csv"
 }
 
