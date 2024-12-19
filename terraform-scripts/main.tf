@@ -24,6 +24,9 @@ module "onecx-ai" {
   source = "./products/onecx-ai"
 }
 
+module "onecx-ai-python" {
+  source = "./products/onecx-ai-python"
+}
 
 module "onecx-concessions" {
   source = "./products/onecx-concessions"
