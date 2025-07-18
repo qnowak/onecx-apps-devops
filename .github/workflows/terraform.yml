@@ -48,6 +48,12 @@ jobs:
       # if: steps.check_files.outputs.files_exists != 'true'
       run: terraform init
 
+    - name: Remove all orphaned resources from state
+      id: remove_orphaned_resources
+      run: |
+          terraform state rm 'module.onecx-ai.module.onecx-example-svc.module.sonarcloud.sonarcloud_project.project'
+          terraform state rm 'module.onecx-ai.module.onecx-example-svc.module.sonarcloud.sonarcloud_project_main_branch.branch'
+
     - name: Terraform Validate
       id: validate
       run: terraform validate -no-color
@@ -77,30 +83,28 @@ jobs:
           #### Terraform Initialization ⚙️\`${{ steps.init.outcome }}\`
           #### Terraform Validation 🤖\`${{ steps.validate.outcome }}\`
           <details><summary>Validation Output</summary>
-          
+
           \`\`\`\n
           ${{ steps.validate.outputs.stdout }}
           \`\`\`
-          
+
           </details>
-          
+
           #### Terraform Plan 📖\`${{ steps.plan.outcome }}\`
-          
+
           <details><summary>Show Plan</summary>
-          
+
           \`\`\`\n
           ${{ env.PLAN_OUTPUT }}
           \`\`\`
-          
+
           </details>
-          
+
           *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`, Working Directory: \`${{ env.tf_actions_working_dir }}\`, Workflow: \`${{ github.workflow }}\`*`;
-          
+
           github.rest.issues.createComment({
             issue_number: context.issue.number,
             owner: context.repo.owner,
             repo: context.repo.repo,
             body: output
           })
-
-  
